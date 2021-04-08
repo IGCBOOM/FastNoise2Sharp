@@ -64,12 +64,6 @@ namespace FastNoiseSharp
 	extern "C"
 	{
 
-		//Free Function
-		FASTNOISESHARP_API void API_FreeNoise(float* noise)
-		{
-			free(noise);
-		}
-
 		//Generator Base Functions
 		FASTNOISESHARP_API void API_GenUniformGrid2D(int32_t gen, float* noiseOut, int32_t xStart, int32_t yStart, int32_t xSize, int32_t ySize, float frequency, int32_t seed, float* minMax)
 		{
@@ -88,6 +82,27 @@ namespace FastNoiseSharp
 		FASTNOISESHARP_API void API_GenUniformGrid4D(int32_t gen, float* noiseOut, int32_t xStart, int32_t yStart, int32_t zStart, int32_t wStart, int32_t xSize, int32_t ySize, int32_t zSize, int32_t wSize, float frequency, int32_t seed, float* minMax)
 		{
 			auto min_max = CFastNoiseAPI::GetFastNoiseAPI()->GetGenerator(gen)->GenUniformGrid4D(noiseOut, xStart, yStart, zStart, wStart, xSize, ySize, zSize, wSize, frequency, seed);
+			minMax[0] = min_max.min;
+			minMax[1] = min_max.max;
+		}
+
+		FASTNOISESHARP_API void API_GenPositionArray2D(int32_t gen, float* noiseOut, int32_t count, const float* xPosArray, const float* yPosArray, float xOffset, float yOffset, int32_t seed, float* minMax)
+		{
+			auto min_max = CFastNoiseAPI::GetFastNoiseAPI()->GetGenerator(gen)->GenPositionArray2D(noiseOut, count, xPosArray, yPosArray, xOffset, yOffset, seed);
+			minMax[0] = min_max.min;
+			minMax[1] = min_max.max;
+		}
+
+		FASTNOISESHARP_API void API_GenPositionArray3D(int32_t gen, float* noiseOut, int32_t count, const float* xPosArray, const float* yPosArray, const float* zPosArray, float xOffset, float yOffset, float zOffset, int32_t seed, float* minMax)
+		{
+			auto min_max = CFastNoiseAPI::GetFastNoiseAPI()->GetGenerator(gen)->GenPositionArray3D(noiseOut, count, xPosArray, yPosArray, zPosArray, xOffset, yOffset, zOffset, seed);
+			minMax[0] = min_max.min;
+			minMax[1] = min_max.max;
+		}
+
+		FASTNOISESHARP_API void API_GenPositionArray4D(int32_t gen, float* noiseOut, int32_t count, const float* xPosArray, const float* yPosArray, const float* zPosArray, const float* wPosArray, float xOffset, float yOffset, float zOffset, float wOffset, int32_t seed, float* minMax)
+		{
+			auto min_max = CFastNoiseAPI::GetFastNoiseAPI()->GetGenerator(gen)->GenPositionArray4D(noiseOut, count, xPosArray, yPosArray, zPosArray, wPosArray, xOffset, yOffset, zOffset, wOffset, seed);
 			minMax[0] = min_max.min;
 			minMax[1] = min_max.max;
 		}
