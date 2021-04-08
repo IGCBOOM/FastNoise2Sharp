@@ -46,13 +46,13 @@ namespace FastNoiseSharp.Generators
     public abstract class OperatorSourceLHS : Generator
     {
 
-        [DllImport("Engine.dll", EntryPoint = "API_OperatorSourceLHSSetLHS", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_OperatorSourceLHSSetLHS", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private protected static extern void API_OperatorSourceLHSSetLHS(int gen, int type, int lhsGen);
 
-        [DllImport("Engine.dll", EntryPoint = "API_OperatorSourceLHSSetRHSGen", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_OperatorSourceLHSSetRHSGen", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private protected static extern void API_OperatorSourceLHSSetRHSGen(int gen, int type, int rhsGen);
 
-        [DllImport("Engine.dll", EntryPoint = "API_OperatorSourceLHSSetRHSFloat", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_OperatorSourceLHSSetRHSFloat", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private protected static extern void API_OperatorSourceLHSSetRHSFloat(int gen, int type, float value);
 
         private protected OperatorSourceLHSTypes _type;

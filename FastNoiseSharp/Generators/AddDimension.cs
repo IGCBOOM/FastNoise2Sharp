@@ -13,13 +13,13 @@ namespace FastNoiseSharp.Generators
     public sealed class AddDimension : Generator
     {
 
-        [DllImport("Engine.dll", EntryPoint = "API_AddDimensionSetSource", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_AddDimensionSetSource", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_AddDimensionSetSource(int gen, int sourceGen);
 
-        [DllImport("Engine.dll", EntryPoint = "API_AddDimensionSetNewDimensionPositionGen", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_AddDimensionSetNewDimensionPositionGen", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_AddDimensionSetNewDimensionPositionGen(int gen, int dPosGen);
 
-        [DllImport("Engine.dll", EntryPoint = "API_AddDimensionSetNewDimensionPositionFloat", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_AddDimensionSetNewDimensionPositionFloat", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_AddDimensionSetNewDimensionPositionFloat(int gen, float value);
 
         internal AddDimension(int gen) : base(gen)

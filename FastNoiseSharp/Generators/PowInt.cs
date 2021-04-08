@@ -13,10 +13,10 @@ namespace FastNoiseSharp.Generators
     public sealed class PowInt : Generator
     {
 
-        [DllImport("Engine.dll", EntryPoint = "API_PowIntSetValue", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_PowIntSetValue", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_PowIntSetValue(int gen, int valueGen);
 
-        [DllImport("Engine.dll", EntryPoint = "API_PowIntSetPow", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_PowIntSetPow", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_PowIntSetPow(int gen, int value);
 
         internal PowInt(int gen) : base(gen)

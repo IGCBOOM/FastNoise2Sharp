@@ -13,10 +13,10 @@ namespace FastNoiseSharp.Generators
     public sealed class RemoveDimension : Generator
     {
 
-        [DllImport("Engine.dll", EntryPoint = "API_RemoveDimensionSetSource", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_RemoveDimensionSetSource", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_RemoveDimensionSetSource(int gen, int sourceGen);
 
-        [DllImport("Engine.dll", EntryPoint = "API_RemoveDimensionSetRemoveDimension", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_RemoveDimensionSetRemoveDimension", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_RemoveDimensionSetRemoveDimension(int gen, int dim);
 
         internal RemoveDimension(int gen) : base(gen)

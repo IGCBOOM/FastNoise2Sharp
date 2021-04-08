@@ -13,16 +13,16 @@ namespace FastNoiseSharp.Generators
     public sealed class PowFloat : Generator
     {
 
-        [DllImport("Engine.dll", EntryPoint = "API_PowFloatSetValueGen", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_PowFloatSetValueGen", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_PowFloatSetValueGen(int gen, int valueGen);
 
-        [DllImport("Engine.dll", EntryPoint = "API_PowFloatSetValueFloat", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_PowFloatSetValueFloat", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_PowFloatSetValueFloat(int gen, float value);
 
-        [DllImport("Engine.dll", EntryPoint = "API_PowFloatSetPowGen", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_PowFloatSetPowGen", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_PowFloatSetPowGen(int gen, int valueGen);
 
-        [DllImport("Engine.dll", EntryPoint = "API_PowFloatSetPowFloat", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_PowFloatSetPowFloat", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_PowFloatSetPowFloat(int gen, float value);
 
         internal PowFloat(int gen) : base(gen)

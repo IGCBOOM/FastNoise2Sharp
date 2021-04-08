@@ -34,13 +34,13 @@ namespace FastNoiseSharp.Generators
     public abstract class Cellular : Generator
     {
 
-        [DllImport("Engine.dll", EntryPoint = "API_CellularSetDistanceFunction", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CellularSetDistanceFunction", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private protected static extern void API_CellularSetDistanceFunction(int gen, int type, int dist_func);
 
-        [DllImport("Engine.dll", EntryPoint = "API_CellularSetJitterModifier", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CellularSetJitterModifier", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private protected static extern void API_CellularSetJitterModifier(int gen, int type, float value);
 
-        [DllImport("Engine.dll", EntryPoint = "API_CellularSetJitterModifierGen", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CellularSetJitterModifierGen", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private protected static extern void API_CellularSetJitterModifierGen(int gen, int type, int inputGen);
 
         private protected CellularTypes _type;

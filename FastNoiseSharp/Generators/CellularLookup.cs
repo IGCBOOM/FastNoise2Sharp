@@ -13,10 +13,10 @@ namespace FastNoiseSharp.Generators
     public sealed class CellularLookup : Cellular
     {
 
-        [DllImport("Engine.dll", EntryPoint = "API_CellularLookupSetLookup", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CellularLookupSetLookup", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_CellularLookupSetLookup(int gen, int lookupGen);
 
-        [DllImport("Engine.dll", EntryPoint = "API_CellularLookupSetLookupFrequency", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CellularLookupSetLookupFrequency", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_CellularLookupSetLookupFrequency(int gen, float frequency);
 
         internal CellularLookup(int gen) : base(gen)

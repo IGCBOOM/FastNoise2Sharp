@@ -13,10 +13,10 @@ namespace FastNoiseSharp.Generators
     public sealed class ConvertRGBA8 : Generator
     {
 
-        [DllImport("Engine.dll", EntryPoint = "API_ConvertRGBA8SetSource", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_ConvertRGBA8SetSource", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_ConvertRGBA8SetSource(int gen, int sourceGen);
 
-        [DllImport("Engine.dll", EntryPoint = "API_ConvertRGBA8SetMinMax", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_ConvertRGBA8SetMinMax", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_ConvertRGBA8SetMinMax(int gen, float min, float max);
 
         internal ConvertRGBA8(int gen) : base(gen)

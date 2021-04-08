@@ -13,13 +13,13 @@ namespace FastNoiseSharp.Generators
     public sealed class Terrace : Generator
     {
 
-        [DllImport("Engine.dll", EntryPoint = "API_TerraceSetSource", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_TerraceSetSource", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_TerraceSetSource(int gen, int sourceGen);
 
-        [DllImport("Engine.dll", EntryPoint = "API_TerraceSetMultiplier", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_TerraceSetMultiplier", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_TerraceSetMultiplier(int gen, float multiplier);
 
-        [DllImport("Engine.dll", EntryPoint = "API_TerraceSetSmoothness", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_TerraceSetSmoothness", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_TerraceSetSmoothness(int gen, float smoothness);
 
         internal Terrace(int gen) : base(gen)

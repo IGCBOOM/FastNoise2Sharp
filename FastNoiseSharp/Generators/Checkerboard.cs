@@ -13,7 +13,7 @@ namespace FastNoiseSharp.Generators
     public sealed class Checkerboard : Generator
     {
 
-        [DllImport("Engine.dll", EntryPoint = "API_CheckerboardSetSize", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CheckerboardSetSize", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_CheckerboardSetSize(int gen, float value);
 
         internal Checkerboard(int gen) : base(gen)

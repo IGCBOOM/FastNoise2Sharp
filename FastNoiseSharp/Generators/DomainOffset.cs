@@ -13,13 +13,13 @@ namespace FastNoiseSharp.Generators
     public sealed class DomainOffset : Generator
     {
 
-        [DllImport("Engine.dll", EntryPoint = "API_DomainOffsetSetSource", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_DomainOffsetSetSource", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_DomainOffsetSetSource(int gen, int sourceGen);
 
-        [DllImport("Engine.dll", EntryPoint = "API_DomainOffsetSetOffsetGen", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_DomainOffsetSetOffsetGen", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_DomainOffsetSetOffsetGen(int gen, int dim, int offsetGen);
 
-        [DllImport("Engine.dll", EntryPoint = "API_DomainOffsetSetOffsetFloat", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_DomainOffsetSetOffsetFloat", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_DomainOffsetSetOffsetFloat(int gen, int dim, float value);
 
         internal DomainOffset(int gen) : base(gen)

@@ -43,13 +43,13 @@ namespace FastNoiseSharp.Generators
             Index0Div1
         }
 
-        [DllImport("Engine.dll", EntryPoint = "API_CellularDistanceSetDistanceIndex0", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CellularDistanceSetDistanceIndex0", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_CellularDistanceSetDistanceIndex0(int gen, int value);
 
-        [DllImport("Engine.dll", EntryPoint = "API_CellularDistanceSetDistanceIndex1", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CellularDistanceSetDistanceIndex1", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_CellularDistanceSetDistanceIndex1(int gen, int value);
 
-        [DllImport("Engine.dll", EntryPoint = "API_CellularDistanceSetReturnType", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CellularDistanceSetReturnType", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_CellularDistanceSetReturnType(int gen, int returnType);
 
         internal CellularDistance(int gen) : base(gen)

@@ -29,16 +29,16 @@ namespace FastNoiseSharp.Generators
     public abstract class OperatorHybridLHS : Generator
     {
 
-        [DllImport("Engine.dll", EntryPoint = "API_OperatorHybridLHSSetLHSGen", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_OperatorHybridLHSSetLHSGen", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private protected static extern void API_OperatorHybridLHSSetLHSGen(int gen, int type, int lhsGen);
 
-        [DllImport("Engine.dll", EntryPoint = "API_OperatorHybridLHSSetLHSFloat", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_OperatorHybridLHSSetLHSFloat", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private protected static extern void API_OperatorHybridLHSSetLHSFloat(int gen, int type, float value);
 
-        [DllImport("Engine.dll", EntryPoint = "API_OperatorHybridLHSSetRHSGen", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_OperatorHybridLHSSetRHSGen", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private protected static extern void API_OperatorHybridLHSSetRHSGen(int gen, int type, int lhsGen);
 
-        [DllImport("Engine.dll", EntryPoint = "API_OperatorHybridLHSSetRHSFloat", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_OperatorHybridLHSSetRHSFloat", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private protected static extern void API_OperatorHybridLHSSetRHSFloat(int gen, int type, float value);
 
         private protected OperatorHybridLHSTypes _type;

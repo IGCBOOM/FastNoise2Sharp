@@ -13,10 +13,10 @@ namespace FastNoiseSharp.Generators
     public sealed class MinSmooth : OperatorSourceLHS
     {
 
-        [DllImport("Engine.dll", EntryPoint = "API_MinSmoothSetSmoothnessGen", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_MinSmoothSetSmoothnessGen", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_MinSmoothSetSmoothnessGen(int gen, int smoothGen);
 
-        [DllImport("Engine.dll", EntryPoint = "API_MinSmoothSetSmoothnessFloat", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_MinSmoothSetSmoothnessFloat", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_MinSmoothSetSmoothnessFloat(int gen, float value);
 
         internal MinSmooth(int gen) : base(gen)

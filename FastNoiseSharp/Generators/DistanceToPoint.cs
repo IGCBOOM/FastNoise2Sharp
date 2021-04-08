@@ -13,13 +13,13 @@ namespace FastNoiseSharp.Generators
     public sealed class DistanceToPoint : Generator
     {
 
-        [DllImport("Engine.dll", EntryPoint = "API_DistanceToPointSetDistanceFunction", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_DistanceToPointSetDistanceFunction", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_DistanceToPointSetDistanceFunction(int gen, int distanceFunction);
 
-        [DllImport("Engine.dll", EntryPoint = "API_DistanceToPointSetScale", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_DistanceToPointSetScale", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_DistanceToPointSetScale(int gen, int dim, float value);
 
-        [DllImport("Engine.dll", EntryPoint = "API_DistanceToPointSetSource", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_DistanceToPointSetSource", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_DistanceToPointSetSource(int gen, int sourceGen);
 
         internal DistanceToPoint(int gen) : base(gen)

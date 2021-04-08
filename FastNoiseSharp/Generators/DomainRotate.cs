@@ -13,16 +13,16 @@ namespace FastNoiseSharp.Generators
     public sealed class DomainRotate : Generator
     {
 
-        [DllImport("Engine.dll", EntryPoint = "API_DomainRotateSetSource", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_DomainRotateSetSource", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_DomainRotateSetSource(int gen, int sourceGen);
 
-        [DllImport("Engine.dll", EntryPoint = "API_DomainRotateSetYaw", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_DomainRotateSetYaw", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_DomainRotateSetYaw(int gen, float value);
 
-        [DllImport("Engine.dll", EntryPoint = "API_DomainRotateSetPitch", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_DomainRotateSetPitch", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_DomainRotateSetPitch(int gen, float value);
 
-        [DllImport("Engine.dll", EntryPoint = "API_DomainRotateSetRoll", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_DomainRotateSetRoll", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_DomainRotateSetRoll(int gen, float value);
 
         internal DomainRotate(int gen) : base(gen)

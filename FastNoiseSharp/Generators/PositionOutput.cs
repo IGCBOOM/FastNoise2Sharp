@@ -14,7 +14,7 @@ namespace FastNoiseSharp.Generators
     public sealed class PositionOutput : Generator
     {
 
-        [DllImport("Engine.dll", EntryPoint = "API_PositionOutputSet", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_PositionOutputSet", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_PositionOutputSet(int gen, int dim, float multiplier, float offset = 0.0f);
 
         internal PositionOutput(int gen) : base(gen)

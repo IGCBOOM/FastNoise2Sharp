@@ -17,31 +17,31 @@ namespace FastNoiseSharp
         /// </summary>
         protected internal int _genID;
 
-        [DllImport("Engine.dll", EntryPoint = "API_RemoveGenerator", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_RemoveGenerator", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private protected static extern void API_RemoveGenerator(int generatorID);
 
-        [DllImport("Engine.dll", EntryPoint = "API_FreeNoise", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_FreeNoise", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private protected static extern void API_FreeNoise(IntPtr noiseArray);
 
-        [DllImport("Engine.dll", EntryPoint = "API_GenUniformGrid2D", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_GenUniformGrid2D", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private protected static extern void API_GenUniformGrid2D(int gen, float[] noiseOut, int xStart, int yStart, int xSize, int ySize, float frequency, int seed);
 
-        [DllImport("Engine.dll", EntryPoint = "API_GenUniformGrid3D", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_GenUniformGrid3D", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private protected static extern void API_GenUniformGrid3D(int gen, float[] noiseOut, int xStart, int yStart, int zStart, int xSize, int ySize, int zSize, float frequency, int seed);
 
-        [DllImport("Engine.dll", EntryPoint = "API_GenUniformGrid4D", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_GenUniformGrid4D", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private protected static extern void API_GenUniformGrid4D(int gen, float[] noiseOut, int xStart, int yStart, int zStart, int wStart, int xSize, int ySize, int zSize, int wSize, float frequency, int seed);
 
-        [DllImport("Engine.dll", EntryPoint = "API_GenSingle2D", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_GenSingle2D", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private protected static extern float API_GenSingle2D(int gen, float x, float y, int seed);
 
-        [DllImport("Engine.dll", EntryPoint = "API_GenSingle3D", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_GenSingle3D", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private protected static extern float API_GenSingle3D(int gen, float x, float y, float z, int seed);
 
-        [DllImport("Engine.dll", EntryPoint = "API_GenSingle4D", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_GenSingle4D", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private protected static extern float API_GenSingle4D(int gen, float x, float y, float z, float w, int seed);
 
-        [DllImport("Engine.dll", EntryPoint = "API_GenTileable2D", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_GenTileable2D", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private protected static extern void API_GenTileable2D(int gen, float[] noiseOut, int xSize, int ySize, float frequency, int seed);
 
         internal Generator(int gen)

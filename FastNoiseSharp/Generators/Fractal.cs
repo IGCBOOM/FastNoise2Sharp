@@ -41,25 +41,25 @@ namespace FastNoiseSharp.Generators
     public abstract class Fractal : Generator
     {
 
-        [DllImport("Engine.dll", EntryPoint = "API_FractalSetSource", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_FractalSetSource", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_FractalSetSource(int gen, int type, int sourceGen);
 
-        [DllImport("Engine.dll", EntryPoint = "API_FractalSetGainGen", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_FractalSetGainGen", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_FractalSetGainGen(int gen, int type, int gainGen);
 
-        [DllImport("Engine.dll", EntryPoint = "API_FractalSetGainFloat", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_FractalSetGainFloat", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_FractalSetGainFloat(int gen, int type, float value);
 
-        [DllImport("Engine.dll", EntryPoint = "API_FractalSetWeightedStrengthGen", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_FractalSetWeightedStrengthGen", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_FractalSetWeightedStrengthGen(int gen, int type, int strengthGen);
 
-        [DllImport("Engine.dll", EntryPoint = "API_FractalSetWeightedStrengthFloat", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_FractalSetWeightedStrengthFloat", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_FractalSetWeightedStrengthFloat(int gen, int type, float value);
 
-        [DllImport("Engine.dll", EntryPoint = "API_FractalSetOctaveCount", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_FractalSetOctaveCount", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_FractalSetOctaveCount(int gen, int type, int value);
 
-        [DllImport("Engine.dll", EntryPoint = "API_FractalSetLacunarity", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_FractalSetLacunarity", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_FractalSetLacunarity(int gen, int type, float value);
 
         private protected FractalTypes _type;

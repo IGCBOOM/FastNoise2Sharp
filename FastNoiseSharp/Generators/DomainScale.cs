@@ -13,10 +13,10 @@ namespace FastNoiseSharp.Generators
     public sealed class DomainScale : Generator
     {
 
-        [DllImport("Engine.dll", EntryPoint = "API_DomainScaleSetSource", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_DomainScaleSetSource", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_DomainScaleSetSource(int gen, int sourceGen);
 
-        [DllImport("Engine.dll", EntryPoint = "API_DomainScaleSetScale", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_DomainScaleSetScale", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_DomainScaleSetScale(int gen, float value);
 
         internal DomainScale(int gen) : base(gen)

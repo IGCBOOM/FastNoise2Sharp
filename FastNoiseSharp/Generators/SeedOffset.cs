@@ -13,10 +13,10 @@ namespace FastNoiseSharp.Generators
     public sealed class SeedOffset : Generator
     {
 
-        [DllImport("Engine.dll", EntryPoint = "API_SeedOffsetSetSource", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_SeedOffsetSetSource", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_SeedOffsetSetSource(int gen, int sourceGen);
 
-        [DllImport("Engine.dll", EntryPoint = "API_SeedOffsetSetOffset", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_SeedOffsetSetOffset", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_SeedOffsetSetOffset(int gen, int offset);
 
         internal SeedOffset(int gen) : base(gen)

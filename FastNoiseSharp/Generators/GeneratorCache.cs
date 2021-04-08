@@ -13,7 +13,7 @@ namespace FastNoiseSharp.Generators
     public sealed class GeneratorCache : Generator
     {
 
-        [DllImport("Engine.dll", EntryPoint = "API_GeneratorCacheSetSource", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_GeneratorCacheSetSource", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_GeneratorCacheSetSource(int gen, int sourceGen);
 
         internal GeneratorCache(int gen) : base(gen)

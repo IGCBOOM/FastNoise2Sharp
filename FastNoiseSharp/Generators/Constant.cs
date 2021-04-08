@@ -13,7 +13,7 @@ namespace FastNoiseSharp.Generators
     public sealed class Constant : Generator
     {
 
-        [DllImport("Engine.dll", EntryPoint = "API_ConstantSetValue", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_ConstantSetValue", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_ConstantSetValue(int gen, float value);
 
         internal Constant(int gen) : base(gen)

@@ -13,16 +13,16 @@ namespace FastNoiseSharp.Generators
     public sealed class Fade : Generator
     {
 
-        [DllImport("Engine.dll", EntryPoint = "API_FadeSetA", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_FadeSetA", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_FadeSetA(int gen, int aGen);
 
-        [DllImport("Engine.dll", EntryPoint = "API_FadeSetB", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_FadeSetB", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_FadeSetB(int gen, int bGen);
 
-        [DllImport("Engine.dll", EntryPoint = "API_FadeSetFadeGen", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_FadeSetFadeGen", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_FadeSetFadeGen(int gen, int fadeGen);
 
-        [DllImport("Engine.dll", EntryPoint = "API_FadeSetFadeFloat", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_FadeSetFadeFloat", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_FadeSetFadeFloat(int gen, float value);
 
         internal Fade(int gen) : base(gen)

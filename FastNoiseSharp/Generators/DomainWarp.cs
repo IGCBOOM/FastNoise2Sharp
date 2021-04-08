@@ -25,16 +25,16 @@ namespace FastNoiseSharp.Generators
     public abstract class DomainWarp : Generator
     {
 
-        [DllImport("Engine.dll", EntryPoint = "API_DomainWarpSetSource", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_DomainWarpSetSource", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_DomainWarpSetSource(int gen, int type, int sourceGen);
 
-        [DllImport("Engine.dll", EntryPoint = "API_DomainWarpSetWarpAmplitudeGen", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_DomainWarpSetWarpAmplitudeGen", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_DomainWarpSetWarpAmplitudeGen(int gen, int type, int wAmpGen);
 
-        [DllImport("Engine.dll", EntryPoint = "API_DomainWarpSetWarpAmplitudeFloat", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_DomainWarpSetWarpAmplitudeFloat", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_DomainWarpSetWarpAmplitudeFloat(int gen, int type, float value);
 
-        [DllImport("Engine.dll", EntryPoint = "API_DomainWarpSetWarpFrequency", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_DomainWarpSetWarpFrequency", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_DomainWarpSetWarpFrequency(int gen, int type, float value);
 
         private protected DomainWarpTypes _type;

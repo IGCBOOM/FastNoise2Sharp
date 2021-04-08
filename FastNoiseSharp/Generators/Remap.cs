@@ -14,10 +14,10 @@ namespace FastNoiseSharp.Generators
     public sealed class Remap : Generator
     {
 
-        [DllImport("Engine.dll", EntryPoint = "API_RemapSetSource", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_RemapSetSource", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_RemapSetSource(int gen, int sourceGen);
 
-        [DllImport("Engine.dll", EntryPoint = "API_RemapSetRemap", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_RemapSetRemap", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_RemapSetRemap(int gen, float fromMin, float fromMax, float toMin, float toMax);
 
         internal Remap(int gen) : base(gen)

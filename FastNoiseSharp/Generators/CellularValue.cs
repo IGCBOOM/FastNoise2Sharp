@@ -13,7 +13,7 @@ namespace FastNoiseSharp.Generators
     public sealed class CellularValue : Cellular
     {
 
-        [DllImport("Engine.dll", EntryPoint = "API_CellularValueSetValueIndex", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CellularValueSetValueIndex", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern void API_CellularValueSetValueIndex(int gen, int value);
 
         internal CellularValue(int gen) : base(gen)
