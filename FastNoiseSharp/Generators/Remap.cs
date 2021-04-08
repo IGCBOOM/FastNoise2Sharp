@@ -24,6 +24,11 @@ namespace FastNoiseSharp.Generators
         {
         }
 
+        public Remap() : base()
+        {
+            _genID = FastNoise.API_CreateRemap();
+        }
+
         /// <summary>
         /// Sets the generator to remap.
         /// </summary>

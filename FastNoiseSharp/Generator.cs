@@ -49,6 +49,10 @@ namespace FastNoiseSharp
             _genID = gen;
         }
 
+        internal Generator()
+        {
+        }
+
         /// <summary>
         /// Generates a flat array of 2D noise.
         /// </summary>

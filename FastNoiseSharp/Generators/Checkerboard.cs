@@ -20,6 +20,11 @@ namespace FastNoiseSharp.Generators
         {
         }
 
+        public Checkerboard() : base()
+        {
+            _genID = FastNoise.API_CreateCheckerboard();
+        }
+
         /// <summary>
         /// Sets the size of the checkerboard.
         /// </summary>

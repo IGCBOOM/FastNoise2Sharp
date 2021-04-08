@@ -17,5 +17,11 @@ namespace FastNoiseSharp.Generators
             _type = OperatorSourceLHSTypes.Max;
         }
 
+        public Max() : base()
+        {
+            _type = OperatorSourceLHSTypes.Max;
+            _genID = FastNoise.API_CreateMax();
+        }
+
     }
 }

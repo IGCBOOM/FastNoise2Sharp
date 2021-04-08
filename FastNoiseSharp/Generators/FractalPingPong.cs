@@ -18,6 +18,12 @@ namespace FastNoiseSharp.Generators
             _type = FractalTypes.PingPong;
         }
 
+        public FractalPingPong() : base()
+        {
+            _type = FractalTypes.PingPong;
+            _genID = FastNoise.API_CreateFractalPingPong();
+        }
+
         /// <summary>
         /// Sets the generator to modify.
         /// </summary>

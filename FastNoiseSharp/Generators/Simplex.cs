@@ -16,5 +16,10 @@ namespace FastNoiseSharp.Generators
         {
         }
 
+        public Simplex() : base()
+        {
+            _genID = FastNoise.API_CreateSimplex();
+        }
+
     }
 }

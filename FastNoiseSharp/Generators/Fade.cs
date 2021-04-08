@@ -29,6 +29,11 @@ namespace FastNoiseSharp.Generators
         {
         }
 
+        public Fade() : base()
+        {
+            _genID = FastNoise.API_CreateFade();
+        }
+
         /// <summary>
         /// Sets the first generator.
         /// </summary>

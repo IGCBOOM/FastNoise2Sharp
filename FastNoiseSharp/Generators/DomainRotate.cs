@@ -29,6 +29,11 @@ namespace FastNoiseSharp.Generators
         {
         }
 
+        public DomainRotate() : base()
+        {
+            _genID = FastNoise.API_CreateDomainRotate();
+        }
+
         /// <summary>
         /// Sets the generator to rotate.
         /// </summary>

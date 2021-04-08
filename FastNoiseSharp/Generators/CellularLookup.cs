@@ -24,6 +24,11 @@ namespace FastNoiseSharp.Generators
             _type = CellularTypes.LookUp;
         }
 
+        public CellularLookup() : base()
+        {
+            _genID = FastNoise.API_CreateCellularLookup();
+        }
+
         /// <summary>
         /// The generator to use to get each cell's value.
         /// </summary>

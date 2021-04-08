@@ -21,6 +21,11 @@ namespace FastNoiseSharp.Generators
         {
         }
 
+        public PositionOutput() : base()
+        {
+            _genID = FastNoise.API_CreatePositionOutput();
+        }
+
         /// <summary>
         /// Sets a axis's multiplier or offset.
         /// </summary>

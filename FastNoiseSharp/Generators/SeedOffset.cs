@@ -23,6 +23,11 @@ namespace FastNoiseSharp.Generators
         {
         }
 
+        public SeedOffset() : base()
+        {
+            _genID = FastNoise.API_CreateSeedOffset();
+        }
+
         /// <summary>
         /// Set the generator to have it's seed offset.
         /// </summary>

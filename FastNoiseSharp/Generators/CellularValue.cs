@@ -21,6 +21,11 @@ namespace FastNoiseSharp.Generators
             _type = CellularTypes.Value;
         }
 
+        public CellularValue() : base()
+        {
+            _genID = FastNoise.API_CreateCellularValue();
+        }
+
         /// <summary>
         /// Every pixel nearby another cell get it's color, and this is seemingly the amount of recursion.
         /// </summary>

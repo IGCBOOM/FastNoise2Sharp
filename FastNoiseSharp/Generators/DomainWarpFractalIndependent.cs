@@ -17,6 +17,12 @@ namespace FastNoiseSharp.Generators
             _type = FractalTypes.DomainWarpIndependent;
         }
 
+        public DomainWarpFractalIndependent() : base()
+        {
+            _type = FractalTypes.DomainWarpIndependent;
+            _genID = FastNoise.API_CreateDomainWarpFractalIndependent();
+        }
+
         /// <summary>
         /// Call this function if it's a domain warp fractal, not the one in the base class.
         /// </summary>

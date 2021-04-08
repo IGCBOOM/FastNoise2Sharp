@@ -17,6 +17,12 @@ namespace FastNoiseSharp.Generators
             _type = FractalTypes.Ridged;
         }
 
+        public FractalRidged() : base()
+        {
+            _type = FractalTypes.Ridged;
+            _genID = FastNoise.API_CreateFractalRidged();
+        }
+
         /// <summary>
         /// Sets the generator to modify.
         /// </summary>

@@ -49,6 +49,10 @@ namespace FastNoiseSharp.Generators
         {
         }
 
+        internal Cellular() : base()
+        {
+        }
+
         /// <summary>
         /// Sets the function applied to the number returned from the center of each cell.<br/>
         /// Can be used to create different shapes for your cells.

@@ -61,6 +61,10 @@ namespace FastNoiseSharp.Generators
         {
         }
 
+        internal OperatorSourceLHS() : base()
+        {
+        }
+
         /// <summary>
         /// Sets the LHS (Left hand side).
         /// </summary>

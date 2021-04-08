@@ -20,6 +20,11 @@ namespace FastNoiseSharp.Generators
         {
         }
 
+        public Constant() : base()
+        {
+            _genID = FastNoise.API_CreateConstant();
+        }
+
         /// <summary>
         /// Sets the constant's value.
         /// </summary>

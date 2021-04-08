@@ -20,6 +20,11 @@ namespace FastNoiseSharp.Generators
         {
         }
 
+        public GeneratorCache() : base()
+        {
+            _genID = FastNoise.API_CreateGeneratorCache();
+        }
+
         /// <summary>
         /// Sets the generator to passthrough.
         /// </summary>

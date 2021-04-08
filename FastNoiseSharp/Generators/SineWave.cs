@@ -21,6 +21,11 @@ namespace FastNoiseSharp.Generators
         {
         }
 
+        public SineWave() : base()
+        {
+            _genID = FastNoise.API_CreateSineWave();
+        }
+
         /// <summary>
         /// Sets the scale of the sine waves.
         /// </summary>

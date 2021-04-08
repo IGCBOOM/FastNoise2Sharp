@@ -16,5 +16,10 @@ namespace FastNoiseSharp.Generators
         {
         }
 
+        public OpenSimplex2() : base()
+        {
+            _genID = FastNoise.API_CreateOpenSimplex2();
+        }
+
     }
 }

@@ -23,6 +23,11 @@ namespace FastNoiseSharp.Generators
         {
         }
 
+        public DomainScale() : base()
+        {
+            _genID = FastNoise.API_CreateDomainScale();
+        }
+
         /// <summary>
         /// Sets the generator to scale.
         /// </summary>

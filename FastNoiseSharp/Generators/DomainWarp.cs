@@ -43,6 +43,10 @@ namespace FastNoiseSharp.Generators
         {
         }
 
+        internal DomainWarp() : base()
+        {
+        }
+
         /// <summary>
         /// Sets the source generator to warp.
         /// </summary>

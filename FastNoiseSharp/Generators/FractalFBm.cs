@@ -17,6 +17,12 @@ namespace FastNoiseSharp.Generators
             _type = FractalTypes.FBm;
         }
 
+        public FractalFBm() : base()
+        {
+            _type = FractalTypes.FBm;
+            _genID = FastNoise.API_CreateFractalFBm();
+        }
+
         /// <summary>
         /// Sets the generator to modify.
         /// </summary>

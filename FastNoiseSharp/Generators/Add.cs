@@ -18,5 +18,11 @@ namespace FastNoiseSharp.Generators
             _type = OperatorSourceLHSTypes.Add;
         }
 
+        public Add() : base()
+        {
+            _type = OperatorSourceLHSTypes.Add;
+            _genID = FastNoise.API_CreateAdd();
+        }
+
     }
 }

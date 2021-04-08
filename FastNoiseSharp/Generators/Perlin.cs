@@ -16,5 +16,10 @@ namespace FastNoiseSharp.Generators
         {
         }
 
+        public Perlin() : base()
+        {
+            _genID = FastNoise.API_CreatePerlin();
+        }
+
     }
 }

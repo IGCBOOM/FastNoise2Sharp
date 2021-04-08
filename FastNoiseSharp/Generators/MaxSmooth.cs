@@ -24,6 +24,12 @@ namespace FastNoiseSharp.Generators
             _type = OperatorSourceLHSTypes.MaxSmooth;
         }
 
+        public MaxSmooth() : base()
+        {
+            _type = OperatorSourceLHSTypes.MaxSmooth;
+            _genID = FastNoise.API_CreateMaxSmooth();
+        }
+
         /// <summary>
         /// Sets how smooth the cutoff should be.
         /// </summary>

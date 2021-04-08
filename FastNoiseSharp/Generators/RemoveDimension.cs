@@ -23,6 +23,11 @@ namespace FastNoiseSharp.Generators
         {
         }
 
+        public RemoveDimension() : base()
+        {
+            _genID = FastNoise.API_CreateRemoveDimension();
+        }
+
         /// <summary>
         /// Sets the generator to remove the dimension from.
         /// </summary>

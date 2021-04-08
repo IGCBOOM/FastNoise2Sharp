@@ -17,5 +17,11 @@ namespace FastNoiseSharp.Generators
             _type = OperatorSourceLHSTypes.Min;
         }
 
+        public Min() : base()
+        {
+            _type = OperatorSourceLHSTypes.Min;
+            _genID = FastNoise.API_CreateMin();
+        }
+
     }
 }

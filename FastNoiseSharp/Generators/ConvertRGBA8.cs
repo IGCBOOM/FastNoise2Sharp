@@ -23,6 +23,11 @@ namespace FastNoiseSharp.Generators
         {
         }
 
+        public ConvertRGBA8() : base()
+        {
+            _genID = FastNoise.API_CreateConvertRGBA8();
+        }
+
         /// <summary>
         /// Sets the generator to be converted.
         /// </summary>

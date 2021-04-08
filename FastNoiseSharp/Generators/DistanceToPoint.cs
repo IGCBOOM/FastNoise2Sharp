@@ -26,6 +26,11 @@ namespace FastNoiseSharp.Generators
         {
         }
 
+        public DistanceToPoint() : base()
+        {
+            _genID = FastNoise.API_CreateDistanceToPoint();
+        }
+
         /// <summary>
         /// Sets the method that should be used to get the number.
         /// </summary>

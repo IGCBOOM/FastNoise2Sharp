@@ -26,6 +26,11 @@ namespace FastNoiseSharp.Generators
         {
         }
 
+        public AddDimension() : base()
+        {
+            _genID = FastNoise.API_CreateAddDimension();
+        }
+
         /// <summary>
         /// Sets the generator to add the dimension to.
         /// </summary>

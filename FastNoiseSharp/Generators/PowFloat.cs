@@ -29,6 +29,11 @@ namespace FastNoiseSharp.Generators
         {
         }
 
+        public PowFloat() : base()
+        {
+            _genID = FastNoise.API_CreatePowFloat();
+        }
+
         /// <summary>
         /// Sets the generator to use as the value.
         /// </summary>

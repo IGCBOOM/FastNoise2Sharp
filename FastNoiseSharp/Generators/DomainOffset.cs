@@ -26,6 +26,11 @@ namespace FastNoiseSharp.Generators
         {
         }
 
+        public DomainOffset() : base()
+        {
+            _genID = FastNoise.API_CreateDomainOffset();
+        }
+
         /// <summary>
         /// Sets the generator to be offset.
         /// </summary>

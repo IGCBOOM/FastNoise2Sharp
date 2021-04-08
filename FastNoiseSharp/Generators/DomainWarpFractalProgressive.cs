@@ -17,6 +17,12 @@ namespace FastNoiseSharp.Generators
             _type = FractalTypes.DomainWarpProgressive;
         }
 
+        public DomainWarpFractalProgressive() : base()
+        {
+            _type = FractalTypes.DomainWarpProgressive;
+            _genID = FastNoise.API_CreateDomainWarpFractalProgressive();
+        }
+
         /// <summary>
         /// Call this function if it's a domain warp fractal, not the one in the base class.
         /// </summary>

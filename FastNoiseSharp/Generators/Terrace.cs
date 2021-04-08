@@ -26,6 +26,11 @@ namespace FastNoiseSharp.Generators
         {
         }
 
+        public Terrace() : base()
+        {
+            _genID = FastNoise.API_CreateTerrace();
+        }
+
         /// <summary>
         /// Sets the generator to terrace.
         /// </summary>

@@ -18,5 +18,11 @@ namespace FastNoiseSharp.Generators
             _type = DomainWarpTypes.Gradient;
         }
 
+        public DomainWarpGradient() : base()
+        {
+            _type = DomainWarpTypes.Gradient;
+            _genID = FastNoise.API_CreateDomainWarpGradient();
+        }
+
     }
 }

@@ -23,6 +23,11 @@ namespace FastNoiseSharp.Generators
         {
         }
 
+        public PowInt() : base()
+        {
+            _genID = FastNoise.API_CreatePowInt();
+        }
+
         /// <summary>
         /// Sets the generator to be raised to a power.
         /// </summary>

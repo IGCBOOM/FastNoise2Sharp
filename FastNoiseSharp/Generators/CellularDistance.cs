@@ -57,6 +57,11 @@ namespace FastNoiseSharp.Generators
             _type = CellularTypes.Distance;
         }
 
+        public CellularDistance() : base()
+        {
+            _genID = FastNoise.API_CreateCellularDistance();
+        }
+
         /// <summary>
         /// Each pixel has a sorted array of the distance to the nearest cell, and the distance index is what's used to access that array per pixel.<br/>
         /// It's probably a good idea to check out NoiseTool, so you get a nice visualization of what's happening.

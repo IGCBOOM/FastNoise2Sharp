@@ -17,5 +17,10 @@ namespace FastNoiseSharp.Generators
         {
         }
 
+        public Value() : base()
+        {
+            _genID = FastNoise.API_CreateValue();
+        }
+
     }
 }

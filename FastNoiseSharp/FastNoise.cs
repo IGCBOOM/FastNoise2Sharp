@@ -68,130 +68,130 @@ namespace FastNoiseSharp
     {
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateFromEncodedNodeTree", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateFromEncodedNodeTree(string nodeTree);
+        internal static extern int API_CreateFromEncodedNodeTree(string nodeTree);
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateValue", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateValue();
+        internal static extern int API_CreateValue();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateCellularDistance", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateCellularDistance();
+        internal static extern int API_CreateCellularDistance();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateCellularLookup", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateCellularLookup();
+        internal static extern int API_CreateCellularLookup();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateCellularValue", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateCellularValue();
+        internal static extern int API_CreateCellularValue();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateOpenSimplex2", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateOpenSimplex2();
+        internal static extern int API_CreateOpenSimplex2();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreatePerlin", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreatePerlin();
+        internal static extern int API_CreatePerlin();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateSimplex", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateSimplex();
+        internal static extern int API_CreateSimplex();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateCheckerboard", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateCheckerboard();
+        internal static extern int API_CreateCheckerboard();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateConstant", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateConstant();
+        internal static extern int API_CreateConstant();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateDistanceToPoint", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateDistanceToPoint();
+        internal static extern int API_CreateDistanceToPoint();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreatePositionOutput", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreatePositionOutput();
+        internal static extern int API_CreatePositionOutput();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateSineWave", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateSineWave();
+        internal static extern int API_CreateSineWave();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateWhite", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateWhite();
+        internal static extern int API_CreateWhite();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateAdd", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateAdd();
+        internal static extern int API_CreateAdd();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateDivide", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateDivide();
+        internal static extern int API_CreateDivide();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateFade", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateFade();
+        internal static extern int API_CreateFade();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateMax", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateMax();
+        internal static extern int API_CreateMax();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateSubtract", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateSubtract();
+        internal static extern int API_CreateSubtract();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateMaxSmooth", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateMaxSmooth();
+        internal static extern int API_CreateMaxSmooth();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateMin", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateMin();
+        internal static extern int API_CreateMin();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateMinSmooth", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateMinSmooth();
+        internal static extern int API_CreateMinSmooth();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateMultiply", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateMultiply();
+        internal static extern int API_CreateMultiply();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreatePowFloat", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreatePowFloat();
+        internal static extern int API_CreatePowFloat();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreatePowInt", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreatePowInt();
+        internal static extern int API_CreatePowInt();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateDomainWarpGradient", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateDomainWarpGradient();
+        internal static extern int API_CreateDomainWarpGradient();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateDomainWarpFractalIndependent", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateDomainWarpFractalIndependent();
+        internal static extern int API_CreateDomainWarpFractalIndependent();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateDomainWarpFractalProgressive", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateDomainWarpFractalProgressive();
+        internal static extern int API_CreateDomainWarpFractalProgressive();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateFractalFBm", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateFractalFBm();
+        internal static extern int API_CreateFractalFBm();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateFractalPingPong", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateFractalPingPong();
+        internal static extern int API_CreateFractalPingPong();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateFractalRidged", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateFractalRidged();
+        internal static extern int API_CreateFractalRidged();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateAddDimension", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateAddDimension();
+        internal static extern int API_CreateAddDimension();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateConvertRGBA8", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateConvertRGBA8();
+        internal static extern int API_CreateConvertRGBA8();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateDomainAxisScale", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateDomainAxisScale();
+        internal static extern int API_CreateDomainAxisScale();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateDomainOffset", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateDomainOffset();
+        internal static extern int API_CreateDomainOffset();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateRemap", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateRemap();
+        internal static extern int API_CreateRemap();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateGeneratorCache", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateGeneratorCache();
+        internal static extern int API_CreateGeneratorCache();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateDomainScale", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateDomainScale();
+        internal static extern int API_CreateDomainScale();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateDomainRotate", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateDomainRotate();
+        internal static extern int API_CreateDomainRotate();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateRemoveDimension", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateRemoveDimension();
+        internal static extern int API_CreateRemoveDimension();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateSeedOffset", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateSeedOffset();
+        internal static extern int API_CreateSeedOffset();
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_CreateTerrace", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private static extern int API_CreateTerrace();
+        internal static extern int API_CreateTerrace();
 
         /// <summary>
         /// Creates a generator from an encoded node tree.<br/>

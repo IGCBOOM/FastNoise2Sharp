@@ -16,5 +16,10 @@ namespace FastNoiseSharp.Generators
         {
         }
 
+        public White() : base()
+        {
+            _genID = FastNoise.API_CreateWhite();
+        }
+
     }
 }

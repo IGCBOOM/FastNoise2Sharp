@@ -17,5 +17,11 @@ namespace FastNoiseSharp.Generators
             _type = OperatorHybridLHSTypes.Subtract;
         }
 
+        public Subtract() : base()
+        {
+            _type = OperatorHybridLHSTypes.Subtract;
+            _genID = FastNoise.API_CreateSubtract();
+        }
+
     }
 }

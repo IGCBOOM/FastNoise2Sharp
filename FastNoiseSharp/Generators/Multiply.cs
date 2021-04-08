@@ -17,5 +17,11 @@ namespace FastNoiseSharp.Generators
             _type = OperatorSourceLHSTypes.Multiply;
         }
 
+        public Multiply() : base()
+        {
+            _type = OperatorSourceLHSTypes.Multiply;
+            _genID = FastNoise.API_CreateMultiply();
+        }
+
     }
 }

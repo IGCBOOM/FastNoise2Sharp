@@ -68,6 +68,10 @@ namespace FastNoiseSharp.Generators
         {
         }
 
+        internal Fractal() : base()
+        {
+        }
+
         /// <summary>
         /// Sets the source generator to warp.
         /// </summary>

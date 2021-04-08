@@ -18,5 +18,11 @@ namespace FastNoiseSharp.Generators
             _type = OperatorHybridLHSTypes.Divide;
         }
 
+        public Divide() : base()
+        {
+            _type = OperatorHybridLHSTypes.Divide;
+            _genID = FastNoise.API_CreateDivide();
+        }
+
     }
 }

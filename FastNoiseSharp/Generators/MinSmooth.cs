@@ -24,6 +24,12 @@ namespace FastNoiseSharp.Generators
             _type = OperatorSourceLHSTypes.MinSmooth;
         }
 
+        public MinSmooth() : base()
+        {
+            _type = OperatorSourceLHSTypes.MinSmooth;
+            _genID = FastNoise.API_CreateMinSmooth();
+        }
+
         /// <summary>
         /// Sets how smooth the cutoff should be.
         /// </summary>
