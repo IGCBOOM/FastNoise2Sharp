@@ -71,19 +71,25 @@ namespace FastNoiseSharp
 		}
 
 		//Generator Base Functions
-		FASTNOISESHARP_API void API_GenUniformGrid2D(int32_t gen, float* noiseOut, int32_t xStart, int32_t yStart, int32_t xSize, int32_t ySize, float frequency, int32_t seed)
+		FASTNOISESHARP_API void API_GenUniformGrid2D(int32_t gen, float* noiseOut, int32_t xStart, int32_t yStart, int32_t xSize, int32_t ySize, float frequency, int32_t seed, float* minMax)
 		{
-			CFastNoiseAPI::GetFastNoiseAPI()->GetGenerator(gen)->GenUniformGrid2D(noiseOut, xStart, yStart, xSize, ySize, frequency, seed);
+			auto min_max = CFastNoiseAPI::GetFastNoiseAPI()->GetGenerator(gen)->GenUniformGrid2D(noiseOut, xStart, yStart, xSize, ySize, frequency, seed);
+			minMax[0] = min_max.min;
+			minMax[1] = min_max.max;
 		}
 
-		FASTNOISESHARP_API void API_GenUniformGrid3D(int32_t gen, float* noiseOut, int32_t xStart, int32_t yStart, int32_t zStart, int32_t xSize, int32_t ySize, int32_t zSize, float frequency, int32_t seed)
+		FASTNOISESHARP_API void API_GenUniformGrid3D(int32_t gen, float* noiseOut, int32_t xStart, int32_t yStart, int32_t zStart, int32_t xSize, int32_t ySize, int32_t zSize, float frequency, int32_t seed, float* minMax)
 		{
-			CFastNoiseAPI::GetFastNoiseAPI()->GetGenerator(gen)->GenUniformGrid3D(noiseOut, xStart, yStart, zStart, xSize, ySize, zSize, frequency, seed);
+			auto min_max = CFastNoiseAPI::GetFastNoiseAPI()->GetGenerator(gen)->GenUniformGrid3D(noiseOut, xStart, yStart, zStart, xSize, ySize, zSize, frequency, seed);
+			minMax[0] = min_max.min;
+			minMax[1] = min_max.max;
 		}
 
-		FASTNOISESHARP_API void API_GenUniformGrid4D(int32_t gen, float* noiseOut, int32_t xStart, int32_t yStart, int32_t zStart, int32_t wStart, int32_t xSize, int32_t ySize, int32_t zSize, int32_t wSize, float frequency, int32_t seed)
+		FASTNOISESHARP_API void API_GenUniformGrid4D(int32_t gen, float* noiseOut, int32_t xStart, int32_t yStart, int32_t zStart, int32_t wStart, int32_t xSize, int32_t ySize, int32_t zSize, int32_t wSize, float frequency, int32_t seed, float* minMax)
 		{
-			CFastNoiseAPI::GetFastNoiseAPI()->GetGenerator(gen)->GenUniformGrid4D(noiseOut, xStart, yStart, zStart, wStart, xSize, ySize, zSize, wSize, frequency, seed);
+			auto min_max = CFastNoiseAPI::GetFastNoiseAPI()->GetGenerator(gen)->GenUniformGrid4D(noiseOut, xStart, yStart, zStart, wStart, xSize, ySize, zSize, wSize, frequency, seed);
+			minMax[0] = min_max.min;
+			minMax[1] = min_max.max;
 		}
 
 		FASTNOISESHARP_API float API_GenSingle2D(int32_t gen, float x, float y, int32_t seed)
@@ -101,9 +107,11 @@ namespace FastNoiseSharp
 			return CFastNoiseAPI::GetFastNoiseAPI()->GetGenerator(gen)->GenSingle4D(x, y, z, w, seed);
 		}
 
-		FASTNOISESHARP_API void API_GenTileable2D(int32_t gen, float* noiseOut, int32_t xSize, int32_t ySize, float frequency, int32_t seed)
+		FASTNOISESHARP_API void API_GenTileable2D(int32_t gen, float* noiseOut, int32_t xSize, int32_t ySize, float frequency, int32_t seed, float* minMax)
 		{
-			CFastNoiseAPI::GetFastNoiseAPI()->GetGenerator(gen)->GenTileable2D(noiseOut, xSize, ySize, frequency, seed);
+			auto min_max = CFastNoiseAPI::GetFastNoiseAPI()->GetGenerator(gen)->GenTileable2D(noiseOut, xSize, ySize, frequency, seed);
+			minMax[0] = min_max.min;
+			minMax[1] = min_max.max;
 		}
 
 		//Type Creation Functions

@@ -24,13 +24,13 @@ namespace FastNoiseSharp
         private protected static extern void API_FreeNoise(IntPtr noiseArray);
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_GenUniformGrid2D", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private protected static extern void API_GenUniformGrid2D(int gen, float[] noiseOut, int xStart, int yStart, int xSize, int ySize, float frequency, int seed);
+        private protected static extern void API_GenUniformGrid2D(int gen, float[] noiseOut, int xStart, int yStart, int xSize, int ySize, float frequency, int seed, float[] minMax);
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_GenUniformGrid3D", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private protected static extern void API_GenUniformGrid3D(int gen, float[] noiseOut, int xStart, int yStart, int zStart, int xSize, int ySize, int zSize, float frequency, int seed);
+        private protected static extern void API_GenUniformGrid3D(int gen, float[] noiseOut, int xStart, int yStart, int zStart, int xSize, int ySize, int zSize, float frequency, int seed, float[] minMax);
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_GenUniformGrid4D", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private protected static extern void API_GenUniformGrid4D(int gen, float[] noiseOut, int xStart, int yStart, int zStart, int wStart, int xSize, int ySize, int zSize, int wSize, float frequency, int seed);
+        private protected static extern void API_GenUniformGrid4D(int gen, float[] noiseOut, int xStart, int yStart, int zStart, int wStart, int xSize, int ySize, int zSize, int wSize, float frequency, int seed, float[] minMax);
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_GenSingle2D", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private protected static extern float API_GenSingle2D(int gen, float x, float y, int seed);
@@ -42,7 +42,7 @@ namespace FastNoiseSharp
         private protected static extern float API_GenSingle4D(int gen, float x, float y, float z, float w, int seed);
 
         [DllImport("FastNoise2Sharp.dll", EntryPoint = "API_GenTileable2D", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        private protected static extern void API_GenTileable2D(int gen, float[] noiseOut, int xSize, int ySize, float frequency, int seed);
+        private protected static extern void API_GenTileable2D(int gen, float[] noiseOut, int xSize, int ySize, float frequency, int seed, float[] minMax);
 
         internal Generator(int gen)
         {
@@ -59,11 +59,16 @@ namespace FastNoiseSharp
         /// <param name="frequency">The scale of the noise</param>
         /// <param name="seed">The noise's seed</param>
         /// <returns>A 1 dimensional float array of 2D noise.</returns>
-        public float[] GenUniformGrid2D(int xStart, int yStart, int xSize, int ySize, float frequency, int seed)
+        public float[] GenUniformGrid2D(int xStart, int yStart, int xSize, int ySize, float frequency, int seed, out float min, out float max)
         {
 
             float[] noise = new float[xSize * ySize];
-            API_GenUniformGrid2D(_genID, noise, xStart, yStart, xSize, ySize, frequency, seed);
+            float[] minMax = new float[2];
+
+            API_GenUniformGrid2D(_genID, noise, xStart, yStart, xSize, ySize, frequency, seed, minMax);
+
+            min = minMax[0];
+            max = minMax[1];
 
             return noise;
 
@@ -81,11 +86,16 @@ namespace FastNoiseSharp
         /// <param name="frequency">The scale of the noise</param>
         /// <param name="seed">The noise's seed</param>
         /// <returns>A 1 dimensional float array of 3D noise.</returns>
-        public float[] GenUniformGrid3D(int xStart, int yStart, int zStart, int xSize, int ySize, int zSize, float frequency, int seed)
+        public float[] GenUniformGrid3D(int xStart, int yStart, int zStart, int xSize, int ySize, int zSize, float frequency, int seed, out float min, out float max)
         {
 
             float[] noise = new float[xSize * ySize * zSize];
-            API_GenUniformGrid3D(_genID, noise, xStart, yStart, zStart, xSize, ySize, zSize, frequency, seed);
+            float[] minMax = new float[2];
+
+            API_GenUniformGrid3D(_genID, noise, xStart, yStart, zStart, xSize, ySize, zSize, frequency, seed, minMax);
+
+            min = minMax[0];
+            max = minMax[1];
 
             return noise;
 
@@ -105,11 +115,16 @@ namespace FastNoiseSharp
         /// <param name="frequency">The scale of the noise</param>
         /// <param name="seed">The noise's seed</param>
         /// <returns>A 1 dimensional float array of 4D noise.</returns>
-        public float[] GenUniformGrid4D(int xStart, int yStart, int zStart, int wStart, int xSize, int ySize, int zSize, int wSize, float frequency, int seed)
+        public float[] GenUniformGrid4D(int xStart, int yStart, int zStart, int wStart, int xSize, int ySize, int zSize, int wSize, float frequency, int seed, out float min, out float max)
         {
 
             float[] noise = new float[xSize * ySize * zSize * wSize];
-            API_GenUniformGrid4D(_genID, noise, xStart, yStart, zStart, wStart, xSize, ySize, zSize, wSize, frequency, seed);
+            float[] minMax = new float[2];
+
+            API_GenUniformGrid4D(_genID, noise, xStart, yStart, zStart, wStart, xSize, ySize, zSize, wSize, frequency, seed, minMax);
+
+            min = minMax[0];
+            max = minMax[1];
 
             return noise;
 
@@ -162,11 +177,16 @@ namespace FastNoiseSharp
         /// <param name="frequency">The scale of the noise</param>
         /// <param name="seed">The noise's seed</param>
         /// <returns>A 1 dimensional float array of 2D noise.</returns>
-        public float[] GenTileable2D(int xSize, int ySize, float frequency, int seed)
+        public float[] GenTileable2D(int xSize, int ySize, float frequency, int seed, out float min, out float max)
         {
 
             float[] noise = new float[xSize * ySize];
-            API_GenTileable2D(_genID, noise, xSize, ySize, frequency, seed);
+            float[] minMax = new float[2];
+
+            API_GenTileable2D(_genID, noise, xSize, ySize, frequency, seed, minMax);
+
+            min = minMax[0];
+            max = minMax[1];
 
             return noise;
 
