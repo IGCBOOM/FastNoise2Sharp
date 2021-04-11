@@ -1,6 +1,7 @@
+## Deprecated in favor of the binding deR1t and I worked on at [FastNoiseOO](https://github.com/deR1t/FastNoiseOO)
+
 # FastNoise2Sharp
 C# API for FastNoise2 in .NET Standard 2.1
-Deprecated in favor of the binding deR1t and I worked on at [FastNoiseOO](https://github.com/deR1t/FastNoiseOO)
 
 ## Description
 An API for [FastNoise2](https://github.com/Auburn/FastNoise2) in C# build on P/invoke calls.
